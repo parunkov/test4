@@ -1,20 +1,20 @@
-export const required = value => {
+const required = value => {
 	if (value) return undefined;
 	// console.log('Field is required');
 	return 'Field is required';
 }
-export const emailOrString = value => {
+const emailOrString = value => {
 	// eslint-disable-next-line
 	if(value.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/) || (/^[a-zA-Z0-9_]+$/).test(value)) return undefined;
 	// console.log('E-mail or string');
 	return 'E-mail or string';
 }
-export const stringWithSpace = value => {
+const stringWithSpace = value => {
 	if ((/^[a-zA-Z0-9_ ]+$/).test(value)) return undefined;
 	// console.log('String');
 	return 'String';
 }
-export const isJson = value => {
+const isJson = value => {
 	try {
 		// eslint-disable-next-line
 		const request = JSON.parse(value);
@@ -24,3 +24,5 @@ export const isJson = value => {
 		return err;			
 	}
 }
+
+export {required, emailOrString, stringWithSpace, isJson};

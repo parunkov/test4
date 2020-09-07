@@ -43,12 +43,12 @@ const deleteError = () => ({
 	type: DELETE_ERROR,
 	payload: {error: false}
 });
-export const setRequestFieldValue = (requestFieldValue) => ({
+const setRequestFieldValue = (requestFieldValue) => ({
 	type: SET_VALUE,
 	payload: {requestFieldValue}
 });
 
-export const sendRequest = (login, sublogin, password, request, requestFieldValue) => (dispatch) => {
+const sendRequest = (login, sublogin, password, request, requestFieldValue) => (dispatch) => {
 	const sendsay = new Sendsay({
 		auth: {login, sublogin, password}
 	});
@@ -66,4 +66,5 @@ export const sendRequest = (login, sublogin, password, request, requestFieldValu
 	});
 }
 
+export {setRequestFieldValue, sendRequest};
 export default fieldsReducer;

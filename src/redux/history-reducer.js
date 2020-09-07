@@ -37,19 +37,20 @@ const historyReducer = (state = initialState, action) => {
 	}
 }
 
-export const addHistoryItem = (title, value, isError) => ({
+const addHistoryItem = (title, value, isError) => ({
 	type: ADD_ITEM,	
 	title,
 	value,
 	isError
 });
-export const deleleHistoryItem = (title) => ({
+const deleleHistoryItem = (title) => ({
 	type: DELETE_ITEM,
 	title
 });
-export const setSavedHistory = (history) => ({
+const setSavedHistory = (history) => ({
 	type: SET_SAVED_HISTORY,
 	payload: {history}
 });
 
+export {addHistoryItem, deleleHistoryItem, setSavedHistory};
 export default historyReducer;

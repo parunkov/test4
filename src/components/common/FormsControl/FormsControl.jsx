@@ -10,7 +10,7 @@ const FormsControl = ({input, meta: {touched, error}, ...props}) => {
 	)
 }
 
-export const Input = (props) => {
+const Input = (props) => {
 	const {input, meta, ...restProps} = props;
 	return (
 		<FormsControl {...props}>
@@ -20,7 +20,7 @@ export const Input = (props) => {
 		</FormsControl>
 	)
 }
-export const Textarea = (props) => {
+const Textarea = (props) => {
 	const {input, meta, setValidationError, ...restProps} = props;
 	return (
 		<FormsControl {...props}>
@@ -29,3 +29,5 @@ export const Textarea = (props) => {
 		</FormsControl>
 	)
 }
+
+export {Input, Textarea};

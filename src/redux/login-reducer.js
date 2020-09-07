@@ -33,11 +33,11 @@ const loginReducer = (state = initialState, action) => {
 	}
 }
 
-export const setLogin = (login, sublogin, password) => ({
+const setLogin = (login, sublogin, password) => ({
 	type: LOGINED,
 	payload: {isLogined: true, login, sublogin, password, error: null}
 });
-export const logout = () =>({
+const logout = () =>({
 	type: LOGOUT,
 	payload: {isLogined: false, login: null, sublogin: null, password: null, error: null}
 });
@@ -45,16 +45,16 @@ const setError = (error) => ({
 	type: ERROR,
 	payload: {error}
 });
-export const setWaiting = () => ({
+const setWaiting = () => ({
 	type: SET_WAITING,
 	payload: {isWaiting: true}
 });
-export const removeWaiting = () => ({
+const removeWaiting = () => ({
 	type: REMOVE_WAITING,
 	payload: {isWaiting: false}
 });
 
-export const checkLogin = (login, sublogin, password) => (dispatch) => {
+const checkLogin = (login, sublogin, password) => (dispatch) => {
 	var sendsay = new Sendsay({
 		auth: {login, sublogin, password}
 	});
@@ -70,4 +70,5 @@ export const checkLogin = (login, sublogin, password) => (dispatch) => {
 	});
 }
 
+export {setLogin, logout, setWaiting, removeWaiting, checkLogin};
 export default loginReducer;
