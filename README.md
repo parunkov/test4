@@ -6,6 +6,9 @@
 
 https://parunkov.github.io/test4/
 
+логин: testapitestapi@mail.ru
+пароль: Aaaa1111
+
 ## Задание
 
 https://www.notion.so/Frontend-API-75cc5ecc28cd42f4a6f963e2dad88680
